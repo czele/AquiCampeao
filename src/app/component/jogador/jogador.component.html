@@ -1,0 +1,57 @@
+<div class="jogadorgeral">
+<div class="titulo">
+    <h1>Jogador</h1>
+</div>
+
+<form class="nome">
+    Qual o nome do Jogador?<br>
+    <mat-form-field class="jogadornome">
+      <mat-label>Nome do Jogador:</mat-label>
+      <input matInput placeholder="">
+    </mat-form-field>
+    <br><br><br>
+</form>
+
+
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br><br><br>
+
+<form>
+    Qual o número da camisa dele?<br>
+    <mat-form-field class="jogadorcamisa">
+      <mat-label>Número da Camisa:</mat-label>
+      <input matInput placeholder="">
+    </mat-form-field>
+    <br><br><br>
+
+    Em que posição ele joga?<br>
+    <mat-form-field class="jogadorposicao">
+      <mat-label>Posição:</mat-label>
+      <input matInput placeholder="">
+    </mat-form-field>
+    <br><br><br>
+</form>
+
+Pé bom:
+<br><br>
+
+<div class="pebom">
+<mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Pé Esquerdo</mat-radio-button>
+    <br><br>
+    <mat-radio-button value="2">Pé Direito</mat-radio-button>
+  </mat-radio-group>
+</div>
+
+<button mat-raised-button color="salvar">Salvar</button>
+<button style="margin-left: 10px; margin-top: 30px;" mat-raised-button color="listar"><a [routerLink]="['/jogadorlistar']">Listar</a></button>
+
+</div>
