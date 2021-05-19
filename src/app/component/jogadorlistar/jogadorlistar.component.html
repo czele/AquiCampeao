@@ -1,0 +1,40 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2 style = "text-align: center">Jogadores listados:</h2>
+
+  <table class="w3-table-all">
+    <tr>
+      <th>Nome</th>
+      <th>Clube</th>
+      <th>Camisa</th>
+      <th>Posição</th>
+      <th>Pé Bom</th>
+      <th>Editar</th>
+    </tr>
+    <tr>
+      <td>Danilo</td>
+      <td>Bahia FC</td>
+      <td>50</td>
+      <td>Atacante</td>
+      <td>Nenhum</td>
+      <td><button mat-raised-button color="salvar">Editar</button></td>
+    </tr>
+    <tr>
+      <td>Fabio</td>
+      <td>Biriguense FC</td>
+      <td>99</td>
+      <td>Meio de campo</td>
+      <td>Esquerdo</td>
+      <td><button mat-raised-button color="salvar">Editar</button></td>
+    </tr>
+  </table>
+  <a [routerLink]="['/jogador']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
+</div>
+
+</body>
+</html>

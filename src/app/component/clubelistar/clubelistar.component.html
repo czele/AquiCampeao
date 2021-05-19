@@ -1,1 +1,37 @@
-<p>clubelistar works!</p>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2 style = "text-align: center">Clubes listados:</h2>
+
+  <table class="w3-table-all">
+    <tr>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th>Estádio</th>
+      <th>Ano de Fundação</th>
+      <th>Editar</th>
+    </tr>
+    <tr>
+      <td>Bahia FC</td>
+      <td>Salvador</td>
+      <td>Fonte Nova</td>
+      <td>1931</td>
+      <td><button mat-raised-button color="salvar">Editar</button></td>
+    </tr>
+    <tr>
+      <td>Novorizontino</td>
+      <td>Novo Horizonte</td>
+      <td>Jorge Ismael de Biasi</td>
+      <td>2001</td>
+      <td><button mat-raised-button color="salvar">Editar</button></td>
+    </tr>
+  </table>
+  <a [routerLink]="['/jogador']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
+</div>
+
+</body>
+</html>
