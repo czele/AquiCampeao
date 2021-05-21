@@ -19,6 +19,10 @@ import {MatTableModule} from '@angular/material/table';
 import { ClubelistarComponent } from './component/clubelistar/clubelistar.component';
 import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.component';
 import { PartidalistarComponent } from './component/partidalistar/partidalistar.component';
+import { HttpClient } from '@angular/common/http';
+import { JogadorService } from './service/jogador.service';
+import { ClubeService } from './service/clube.service';
+import { PartidaService } from './service/partida.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,12 @@ import { PartidalistarComponent } from './component/partidalistar/partidalistar.
     MatGridListModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+    JogadorService,
+    ClubeService,
+    PartidaService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

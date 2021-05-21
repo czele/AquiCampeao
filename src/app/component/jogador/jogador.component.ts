@@ -5,6 +5,7 @@ interface Food {
   viewValue: string;
 }
 
+
 @Component({
   selector: 'app-jogador',
   templateUrl: './jogador.component.html',
