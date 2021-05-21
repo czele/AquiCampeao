@@ -1,1 +1,32 @@
-<p>partidalistar works!</p>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2 style = "text-align: center">Partidas Cadastradas:</h2>
+
+  <table class="w3-table-all">
+    <tr>
+      <th>Mandante</th>
+      <th>Gols Mandante</th>
+      <th>Gols Visitante</th>
+      <th>Visitante</th>
+      <th>Data</th>
+      <th>Editar</th>
+    </tr>
+    <tr>
+      <td>Bahia</td>
+      <td>2</td>
+      <td>2</td>
+      <td>Biriguense</td>
+      <td>01/06/2021</td>
+      <td><button mat-raised-button color="salvar">Editar</button></td>
+    </tr>
+  </table>
+  <a [routerLink]="['/partida']" > <img class="botaomais" src="./../assets/addbutton.webp"> </a>
+</div>
+
+</body>
+</html>
