@@ -17,19 +17,11 @@
       <th>Editar</th>
     </tr>
     <tr *ngFor="let cadajogador of jogadorList">
-      <td>Danilo</td>
-      <td>Bahia FC</td>
-      <td>50</td>
-      <td>Atacante</td>
-      <td>Nenhum</td>
-      <td><button mat-raised-button color="salvar">Editar</button></td>
-    </tr>
-    <tr>
-      <td>Fabio</td>
-      <td>Biriguense FC</td>
-      <td>99</td>
-      <td>Meio de campo</td>
-      <td>Esquerdo</td>
+      <td>{{cadajogador.nome}}</td>
+      <td>{{cadajogador.clube}}</td>
+      <td>{{cadajogador.camisa}}</td>
+      <td>{{cadajogador.posicao}}</td>
+      <td>{{cadajogador.pebom}}</td>
       <td><button mat-raised-button color="salvar">Editar</button></td>
     </tr>
   </table>

@@ -13,6 +13,11 @@ export class ClubelistarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.clubeList.push(
+      {id:1, nome:"Bahia FC", cidade: "Salvador", estadio:"Fonte Nova", anodefundacao:1931},
+      {id:2, nome:"Novohorizontino", cidade: "Novo Horizonte", estadio:"Jorge Ismael de Biasi", anodefundacao:1950},
+    )
+   
   }
 
 }

@@ -15,18 +15,11 @@
       <th>Ano de Fundação</th>
       <th>Editar</th>
     </tr>
-    <tr>
-      <td>Bahia FC</td>
-      <td>Salvador</td>
-      <td>Fonte Nova</td>
-      <td>1931</td>
-      <td><button mat-raised-button color="salvar">Editar</button></td>
-    </tr>
-    <tr>
-      <td>Novorizontino</td>
-      <td>Novo Horizonte</td>
-      <td>Jorge Ismael de Biasi</td>
-      <td>2001</td>
+    <tr *ngFor="let cadaclube of clubeList">  
+      <td>{{cadaclube.nome}}/td>
+      <td>{{cadaclube.cidade}}</td>
+      <td>{{cadaclube.estadio}}</td>
+      <td>{{cadaclube.anodefundacao}}</td>
       <td><button mat-raised-button color="salvar">Editar</button></td>
     </tr>
   </table>

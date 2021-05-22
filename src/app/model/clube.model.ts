@@ -3,5 +3,5 @@ export interface Clube {
     nome: string;
     cidade: string;
     estadio: string;
-    anodefundacao: string;
+    anodefundacao: number;
 }

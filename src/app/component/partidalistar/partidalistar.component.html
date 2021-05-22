@@ -16,12 +16,12 @@
       <th>Data</th>
       <th>Editar</th>
     </tr>
-    <tr>
-      <td>Bahia</td>
-      <td>2</td>
-      <td>2</td>
-      <td>Biriguense</td>
-      <td>01/06/2021</td>
+    <tr *ngFor="let cadapartida of partidaList">
+      <td>{{cadapartida.mandante}}</td>
+      <td>{{cadapartida.golsmandante}}</td>
+      <td>{{cadapartida.golsvisitante}}</td>
+      <td>{{cadapartida.visitante}}</td>
+      <td>{{cadapartida.data}}</td>
       <td><button mat-raised-button color="salvar">Editar</button></td>
     </tr>
   </table>
