@@ -9,16 +9,16 @@ import { Jogador } from '../model/jogador.model';
 })
 export class JogadorService {
 
-  baseUrl:string = environment.baseUrl
+  baseUrl: string = environment.baseUrl
   // endpoint:string = "jogador/listar"  
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   listar(): Observable<Jogador[]> {
     return this._http.get<Jogador[]>(`${this.baseUrl}/jogadorlistar`);
   }
 
-  inserir(jogador:Jogador): Observable<any> {
+  inserir(jogador: Jogador): Observable<any> {
     return this._http.post<any>(`${this.baseUrl}/jogadorincluir`, jogador);
   }
 

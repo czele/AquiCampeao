@@ -35,11 +35,9 @@ export class JogadorComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  
   save(){
     console.log(this.form.value)
     this._service.inserir(this.form.value).subscribe(response=>console.log(response))
   }
-
 
 }
