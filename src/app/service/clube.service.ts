@@ -13,6 +13,6 @@ export class ClubeService {
   baseUrl:string = environment.baseUrl
   // endpoint:string = "clube/listar"  
 
-  constructor(private _http:HttpClient) { }
+  constructor() { }
 
 }

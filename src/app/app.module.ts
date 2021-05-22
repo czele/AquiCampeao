@@ -14,8 +14,8 @@ import { PartidaComponent } from './component/partida/partida.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ClubeComponent } from './component/clube/clube.component';
 import { JogadorComponent } from './component/jogador/jogador.component';
-import {MatGridListModule} from '@angular/material/grid-list'; 
-import {MatTableModule} from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list'; 
+import { MatTableModule } from '@angular/material/table';
 import { ClubelistarComponent } from './component/clubelistar/clubelistar.component';
 import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.component';
 import { PartidalistarComponent } from './component/partidalistar/partidalistar.component';
@@ -23,6 +23,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JogadorService } from './service/jogador.service';
 import { ClubeService } from './service/clube.service';
 import { PartidaService } from './service/partida.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,15 +47,16 @@ import { PartidaService } from './service/partida.service';
     MatSelectModule,
     MatFormFieldModule,
     MatGridListModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     HttpClient,
     JogadorService,
     ClubeService,
     PartidaService,
-    AppRoutingModule,
-    HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })

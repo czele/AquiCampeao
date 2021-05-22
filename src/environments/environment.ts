@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:"http://demo2360269.mockable.io"
+  baseUrl:"https://60a9269220a6410017306d25.mockapi.io//jogadorlistar/"
 };
 
 /*
