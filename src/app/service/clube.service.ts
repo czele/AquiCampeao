@@ -13,6 +13,14 @@ export class ClubeService {
   baseUrl:string = environment.baseUrl
   // endpoint:string = "clube/listar"  
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
+
+  listar():Observable<Clube[]> {
+    return this._http.get<Clube[]>(`${this.baseUrl}clubelistar`);
+  }
+
+  inserir(clube: Clube): Observable<any> {
+    return this._http.post<any>(`${this.baseUrl}clubeincluir`, clube);
+  }
 
 }

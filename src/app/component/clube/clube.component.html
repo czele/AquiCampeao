@@ -3,38 +3,39 @@
     <h1>Clube</h1>
   </div>
 
-  <form class="clubeformulario">
+  <form class="clubeformulario" [formGroup]="form" (ngSubmit)="save()">
     Qual o nome do Clube?<br>
     <mat-form-field class="clubenome">
       <mat-label>Nome do Clube:</mat-label>
-      <input matInput placeholder="">
+      <input matInput placeholder="" formControlName="nome">
     </mat-form-field>
     <br><br><br>
 
     Qual a cidade do Clube?<br>
     <mat-form-field class="clubecidade">
       <mat-label>Cidade do Clube:</mat-label>
-      <input matInput placeholder="">
+      <input matInput placeholder="" formControlName="cidade">
     </mat-form-field>
     <br><br><br>
 
     Qual o nome do estádio?<br>
     <mat-form-field class="nomeestadio">
       <mat-label>Nome do Estádio:</mat-label>
-      <input matInput placeholder="">
+      <input matInput placeholder="" formControlName="estadio">
     </mat-form-field>
 
     <br><br><br>
 
     Qual o ano de fundação do Clube?<br>
-    <mat-form-field class="anofundacao">
+    <mat-form-field class="anodefundacao" formControlName="anodefundacao">
       <mat-label>Ano de fundação:</mat-label>
       <input matInput placeholder="">
     </mat-form-field>
 
+    <br><br><br>
+
+    <button mat-raised-button color="salvar" type="submit">Salvar</button>
+    <button class="margembotao" mat-raised-button color="listar"><a [routerLink]="['/clubelistar']">Listar</a></button>
+
   </form>
-
-  <button mat-raised-button color="salvar">Salvar</button>
-  <button class="margembotao" mat-raised-button color="listar"><a [routerLink]="['/clubelistar']">Listar</a></button>
-
 </div>

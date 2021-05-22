@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clube } from 'src/app/model/clube.model';
+import { ClubeService } from 'src/app/service/clube.service';
 
 @Component({
   selector: 'app-clubelistar',
@@ -8,16 +9,12 @@ import { Clube } from 'src/app/model/clube.model';
 })
 export class ClubelistarComponent implements OnInit {
 
-  clubeList:Clube[] = [];
+  clubeList: Clube[] = [];
 
-  constructor() { }
+  constructor(private _service:ClubeService) { }
 
   ngOnInit(): void {
-    this.clubeList.push(
-      {id:1, nome:"Bahia FC", cidade: "Salvador", estadio:"Fonte Nova", anodefundacao:1931},
-      {id:2, nome:"Novohorizontino", cidade: "Novo Horizonte", estadio:"Jorge Ismael de Biasi", anodefundacao:1950},
-    )
-   
+    this._service.listar().subscribe(clube=> this.clubeList = clube)
   }
 
 }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:"https://60a9269220a6410017306d25.mockapi.io//jogadorlistar/"
+  baseUrl:"https://60a9269220a6410017306d25.mockapi.io/jogadorlistar/"
 };
 
 /*API fake:l"https://60a9269220a6410017306d25.mockapi.io//jogadorlistar/"
