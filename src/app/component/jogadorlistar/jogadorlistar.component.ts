@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Jogador } from 'src/app/model/jogador.model';
+import { JogadorService } from 'src/app/service/jogador.service';
 
 
 @Component({
@@ -12,14 +13,10 @@ export class JogadorlistarComponent implements OnInit {
 
   jogadorList:Jogador[] = [];
 
-  constructor() { }
+  constructor(private _service:JogadorService) { }
 
   ngOnInit(): void {
-
-    this.jogadorList.push(
-      {id:1, nome:"Danilo", clube: "Bahia", camisa:50, posicao: "Atacante", pebom:"Nenhum"},
-      {id:2, nome:"Fábio", clube: "Biriguense", camisa:99, posicao: "Zaga", pebom:"Esquerdo"},
-    )
-  }
+    this._service.listar().subscribe(jogador => this.jogadorList = jogador)
+   }
 
 }

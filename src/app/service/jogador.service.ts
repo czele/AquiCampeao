@@ -14,8 +14,8 @@ export class JogadorService {
 
   constructor(private _http:HttpClient) { }
 
-  listar(): Observable<Jogador> {
-    return this._http.get<Jogador>(`${this.baseUrl}/jogador/listar`)
+  listar(): Observable<Jogador[]> {
+    return this._http.get<Jogador[]>(`${this.baseUrl}/jogadorlistar`)
   }
 
 }
