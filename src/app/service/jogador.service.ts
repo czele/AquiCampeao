@@ -15,11 +15,11 @@ export class JogadorService {
   constructor(private _http:HttpClient) { }
 
   listar(): Observable<Jogador[]> {
-    return this._http.get<Jogador[]>(`${this.baseUrl}/jogadorlistar`);
+    return this._http.get<Jogador[]>(`${this.baseUrl}jogadorlistar`);
   }
 
   inserir(jogador:Jogador): Observable<any> {
-    return this._http.post<any>(`${this.baseUrl}/jogadorincluir`, jogador);
+    return this._http.post<any>(`${this.baseUrl}jogadorincluir`, jogador);
   }
 
 }

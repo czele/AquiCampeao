@@ -1,40 +1,50 @@
 <div class="partidageral">
-    <div class="titulo">
-      <h1>Partida</h1>
-    </div>
-      
-    <form class="partidaformulario">
-      Mandante:<br>
-      <mat-form-field class="mandante">
-        <mat-label>Mandante:</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-      
-      <br><br><br>
-  
-      Visitante<br>
-      <mat-form-field class="visitante">
-        <mat-label>Visitante:</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-      <br><br><br>
-  
-      Gols Mandante:<br>
-      <mat-form-field class="golsmandante">
-        <mat-label>Gols Mandante:</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-  
-      <br><br><br>
-  
-      Gols Visitante:<br>
-      <mat-form-field class="golsvisitante">
-        <mat-label>Gols Visitante:</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-  
-    </form>
+  <div class="titulo">
+    <h1>Partida</h1>
+  </div>
 
+  <form class="partidaformulario" [formGroup]="form" (ngSubmit)="save()">
+    Mandante:<br>
+    <mat-form-field class="mandante">
+      <mat-label>Mandante:</mat-label>
+      <input matInput placeholder="" formControlName="mandante">
+    </mat-form-field>
+
+    <br><br><br>
+
+    Visitante<br>
+    <mat-form-field class="visitante">
+      <mat-label>Visitante:</mat-label>
+      <input matInput placeholder="" formControlName="visitante">
+    </mat-form-field>
+    <br><br><br>
+
+    Gols Mandante:<br>
+    <mat-form-field class="golsmandante">
+      <mat-label>Gols Mandante:</mat-label>
+      <input matInput placeholder="" formControlName="golsmandante">
+    </mat-form-field>
+
+    <br><br><br>
+
+    Gols Visitante:<br>
+    <mat-form-field class="golsvisitante">
+      <mat-label>Gols Visitante:</mat-label>
+      <input matInput placeholder="" formControlName="golsvisitante">
+    </mat-form-field>
+
+    <br><br><br>
+    
+    Data:<br>
+    <mat-form-field class="golsvisitante">
+      <mat-label>Data:</mat-label>
+      <input matInput placeholder="" formControlName="data">
+    </mat-form-field>
+
+    <br>
     <button mat-raised-button color="salvar">Salvar</button>
-    <button class="margembotao" mat-raised-button color="listar"><a [routerLink]="['/partidalistar']">Listar</a></button>
+
+    <button class="margembotao" mat-raised-button color="listar"><a
+        [routerLink]="['/partidalistar']">Listar</a></button>
+  </form>
 </div>

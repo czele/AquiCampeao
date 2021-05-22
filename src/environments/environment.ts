@@ -7,7 +7,8 @@ export const environment = {
   baseUrl:"https://60a9269220a6410017306d25.mockapi.io//jogadorlistar/"
 };
 
-/*
+/*API fake:l"https://60a9269220a6410017306d25.mockapi.io//jogadorlistar/"
+API local:http://localhost:5000/
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *
