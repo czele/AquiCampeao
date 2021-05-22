@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { JogadorService } from 'src/app/service/jogador.service';
 
 interface Food {
   value: string;
@@ -28,9 +29,17 @@ export class JogadorComponent implements OnInit {
     pebom:"",
 
   })
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,
+    private _service:JogadorService) { }
 
   ngOnInit(): void {
   }
+  
+  
+  save(){
+    console.log(this.form.value)
+    this._service.inserir(this.form.value).subscribe(response=>console.log(response))
+  }
+
 
 }
