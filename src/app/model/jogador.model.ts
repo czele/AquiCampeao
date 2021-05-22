@@ -3,6 +3,6 @@ export interface Jogador {
     nome: string;
     clube: string;
     camisa: number;
-    posição: string;
+    posicao: string;
     pebom: string;
 }
