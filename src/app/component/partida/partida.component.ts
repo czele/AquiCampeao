@@ -7,7 +7,9 @@ import { FormBuilder } from '@angular/forms';
   templateUrl: './partida.component.html',
   styleUrls: ['./partida.component.css']
 })
+
 export class PartidaComponent implements OnInit {
+
 
   form = this.formBuilder.group({
     mandante: "",
@@ -21,8 +23,8 @@ export class PartidaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  save(){
+  save() {
     console.log(this.form.value)
-    this._service.inserir(this.form.value).subscribe(response=>console.log(response))
+    this._service.inserir(this.form.value).subscribe(response => console.log(response))
   }
 }

@@ -4,5 +4,5 @@ export interface Partida {
     golsmandante: number;
     golsvisitante: number,
     visitante: number;
-    data: string;
+    data: Date;
 }
