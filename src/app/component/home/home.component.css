@@ -1,7 +1,11 @@
-mat-grid-tile {
-  background: #046D01;
+img{
+height: 250px;
 }
 
 .button {
-  width: 10px;
+  opacity: 0.5;
+}
+
+.button:hover {
+  opacity: 1;
 }
