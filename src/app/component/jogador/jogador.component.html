@@ -17,8 +17,8 @@
 <mat-form-field appearance="fill">
   <mat-label>Lista de Clubes</mat-label>
   <mat-select formControlName = "posicao">
-    <mat-option *ngFor="let food of foods" [value]="food.value" >
-      {{food.viewValue}}
+    <mat-option *ngFor="let jogadordrop of jogadordrop" [value]="jogadordrop.value" >
+      {{jogadordrop.viewValue}}
     </mat-option>
   </mat-select>
 </mat-form-field>

@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { JogadorService } from 'src/app/service/jogador.service';
 
-interface Food {
+interface Jogadordrop {
   value: string;
   viewValue: string;
 }
-
 
 @Component({
   selector: 'app-jogador',
@@ -15,7 +14,7 @@ interface Food {
 })
 export class JogadorComponent implements OnInit {
   
-  foods:Food[] = [
+  jogadordrop:Jogadordrop[] = [
     {value: 'Bahia', viewValue: 'Bahia'},
     {value: 'Biriguense', viewValue: 'Biriguense'},
     {value: 'Novo Horizontino', viewValue: 'Novo Horizontino'}

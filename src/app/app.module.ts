@@ -24,6 +24,7 @@ import { JogadorService } from './service/jogador.service';
 import { ClubeService } from './service/clube.service';
 import { PartidaService } from './service/partida.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
   ],
   providers: [
     HttpClient,

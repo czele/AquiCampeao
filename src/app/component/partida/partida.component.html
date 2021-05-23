@@ -34,12 +34,17 @@
     </mat-form-field>
 
     <br><br><br>
-    
+
     Data:<br>
-    <mat-form-field class="golsvisitante">
-      <mat-label>Data:</mat-label>
-      <input matInput placeholder="" formControlName="data">
+ 
+    <mat-form-field appearance="fill">
+      <mat-label>Escolha a data da partida</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+    
+    
 
     <br>
     <button mat-raised-button color="salvar">Salvar</button>
