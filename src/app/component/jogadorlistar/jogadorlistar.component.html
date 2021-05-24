@@ -19,10 +19,10 @@
     <!-- ngFor serve como um for, ele vai pegar todos os dados obtidos com o get e colocar em td's -->
     <tr *ngFor="let cadajogador of jogadorList">
       <td>{{cadajogador.nome}}</td>
-      <td>{{cadajogador.clube}}</td>
+      <td>{{cadajogador.idClube}}</td>
       <td>{{cadajogador.camisa}}</td>
       <td>{{cadajogador.posicao}}</td>
-      <td>{{cadajogador.pebom}}</td>
+      <td>{{cadajogador.peBom}}</td>
       <td><button mat-raised-button color="salvar">Editar</button></td>
     </tr>
   </table>

@@ -19,7 +19,7 @@ export class JogadorService {
   }
 
   inserir(jogador:Jogador): Observable<any> {
-    return this._http.post<any>(`${this.baseUrl}jogadorincluir`, jogador);
+    return this._http.post<any>(`${this.baseUrl}jogador/inserir`, jogador);
   }
 
 }

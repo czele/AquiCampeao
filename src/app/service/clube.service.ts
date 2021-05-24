@@ -16,11 +16,11 @@ export class ClubeService {
   constructor(private _http: HttpClient) { }
 
   listar():Observable<Clube[]> {
-    return this._http.get<Clube[]>(`${this.baseUrl}clubelistar`);
+    return this._http.get<Clube[]>(`${this.baseUrl}clube/listar`);
   }
 
   inserir(clube: Clube): Observable<any> {
-    return this._http.post<any>(`${this.baseUrl}clubeincluir`, clube);
+    return this._http.post<any>(`${this.baseUrl}clube/inserir`, clube);
   }
 
 }

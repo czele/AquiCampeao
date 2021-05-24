@@ -1,8 +1,8 @@
 export interface Jogador {
     id:number;
     nome: string;
-    clube: number;
+    idClube: number;
     camisa: number;
     posicao: string;
-    pebom: string;
+    peBom: string;
 }

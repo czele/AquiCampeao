@@ -25,7 +25,7 @@ export class JogadorComponent implements OnInit {
     clube:"",
     camisa:"",
     posicao:"",
-    pebom:"",
+    peBom:"",
 
   })
   constructor(private formBuilder:FormBuilder,

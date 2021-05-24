@@ -1,8 +1,8 @@
 export interface Partida {
     id: number;
-    mandante: number;
-    golsmandante: number;
-    golsvisitante: number,
-    visitante: number;
+    idMandante: number;
+    golsMandante: number;
+    golsVisitante: number,
+    idVisitante: number;
     data: Date;
 }

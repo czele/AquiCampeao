@@ -15,12 +15,12 @@ export class PartidaService {
   constructor(private _http: HttpClient) { }
 
   listar(): Observable<Partida[]>{
-    return this._http.get<Partida[]>(`${this.baseUrl}partidalistar`)
+    return this._http.get<Partida[]>(`${this.baseUrl}partida/listar`)
   }
 
 
   inserir(partida: Partida): Observable<any> {
-    return this._http.post<any>(`${this.baseUrl}partidaincluir`, partida);
+    return this._http.post<any>(`${this.baseUrl}partida/inserir`, partida);
   }
 
 }
