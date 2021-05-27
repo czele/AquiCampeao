@@ -14,7 +14,7 @@
       <th>Gols Visitante</th>
       <th>Visitante</th>
       <th>Data</th>
-      <th>Editar</th>
+      <th></th>
     </tr>
     <tr *ngFor="let cadapartida of partidaList">
       <td>{{cadapartida.idMandante}}</td>
@@ -22,7 +22,7 @@
       <td>{{cadapartida.golsVisitante}}</td>
       <td>{{cadapartida.idVisitante}}</td>
       <td>{{cadapartida.data}}</td>
-      <td><button mat-raised-button color="salvar">Editar</button></td>
+      <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete" src="./../assets/lixeira.png"></button></td>
     </tr>
   </table>
   <a [routerLink]="['/partida']" > <img class="botaomais" src="./../assets/addbutton.webp"> </a>

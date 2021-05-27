@@ -13,14 +13,14 @@
       <th>Cidade</th>
       <th>Estádio</th>
       <th>Ano de Fundação</th>
-      <th>Editar</th>
+      <th></th>
     </tr>
     <tr *ngFor="let cadaclube of clubeList">  
       <td>{{cadaclube.nome}}</td>
       <td>{{cadaclube.cidade}}</td>
       <td>{{cadaclube.nomeEstadio}}</td>
       <td>{{cadaclube.anoFundacao}}</td>
-      <td><button mat-raised-button color="salvar">Editar</button></td>
+      <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete" src="./../assets/lixeira.png"></button></td>
     </tr>
   </table>
   <a [routerLink]="['/clube']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>

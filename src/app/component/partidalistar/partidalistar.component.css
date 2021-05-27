@@ -5,3 +5,7 @@
     margin-right: auto;
     margin-top: 10px;   
 }
+
+.bedit, .bdelete{
+    width: 25px
+}
