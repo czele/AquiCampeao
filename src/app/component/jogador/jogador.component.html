@@ -5,7 +5,7 @@
 
 <form class="nome" [formGroup]="form" (ngSubmit)="save()">
     Qual o nome do Jogador?<br>
-    <mat-form-field class="jogadornome">
+    <mat-form-field>
       <mat-label>Nome do Jogador:</mat-label>
       <input matInput placeholder="" formControlName = "nome">
     </mat-form-field>
@@ -16,9 +16,9 @@
 <h4>Clube:</h4>
 <mat-form-field appearance="fill">
   <mat-label>Lista de Clubes</mat-label>
-  <mat-select formControlName = "posicao">
-    <mat-option *ngFor="let jogadordrop of jogadordrop" [value]="jogadordrop.value" >
-      {{jogadordrop.viewValue}}
+  <mat-select formControlName = "idClube">
+    <mat-option *ngFor="let clube of clubes" [value]="clube.nome" >
+      {{clube.nome}}
     </mat-option>
   </mat-select>
 </mat-form-field>
@@ -26,14 +26,14 @@
 
 
     Qual o número da camisa dele?<br>
-    <mat-form-field class="jogadorcamisa">
+    <mat-form-field>
       <mat-label>Número da Camisa:</mat-label>
       <input matInput placeholder="" formControlName = "camisa">
     </mat-form-field>
     <br><br><br>
 
     Em que posição ele joga?<br>
-    <mat-form-field class="jogadorposicao">
+    <mat-form-field>
       <mat-label>Posição:</mat-label>
       <input matInput placeholder="" formControlName = "posicao">
     </mat-form-field>
@@ -43,7 +43,7 @@
 Pé bom:
 <br><br>
 
-<div class="pebom">
+<div>
 <mat-radio-group aria-label="Select an option" formControlName = "peBom">
     <mat-radio-button value="Esquerdo" >Pé Esquerdo</mat-radio-button>
     <br><br>

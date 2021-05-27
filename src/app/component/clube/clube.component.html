@@ -5,21 +5,21 @@
 
   <form class="clubeformulario" [formGroup]="form" (ngSubmit)="save()">
     Qual o nome do Clube?<br>
-    <mat-form-field class="clubenome">
+    <mat-form-field>
       <mat-label>Nome do Clube:</mat-label>
       <input matInput placeholder="" formControlName="nome">
     </mat-form-field>
     <br><br><br>
 
     Qual a cidade do Clube?<br>
-    <mat-form-field class="clubecidade">
+    <mat-form-field>
       <mat-label>Cidade do Clube:</mat-label>
       <input matInput placeholder="" formControlName="cidade">
     </mat-form-field>
     <br><br><br>
 
     Qual o nome do estádio?<br>
-    <mat-form-field class="nomeestadio">
+    <mat-form-field>
       <mat-label>Nome do Estádio:</mat-label>
       <input matInput placeholder="" formControlName="nomeEstadio">
     </mat-form-field>
@@ -27,9 +27,9 @@
     <br><br><br>
 
     Qual o ano de fundação do Clube?<br>
-    <mat-form-field class="anodefundacao" formControlName="anoFundacao">
+    <mat-form-field>
       <mat-label>Ano de fundação:</mat-label>
-      <input matInput placeholder="">
+      <input matInput placeholder="" formControlName="anoFundacao">
     </mat-form-field>
 
     <br><br><br>

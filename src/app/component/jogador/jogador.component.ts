@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Clube } from 'src/app/model/clube.model';
+import { ClubeService } from 'src/app/service/clube.service';
 import { JogadorService } from 'src/app/service/jogador.service';
 
-interface Jogadordrop {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-jogador',
@@ -14,24 +12,22 @@ interface Jogadordrop {
 })
 export class JogadorComponent implements OnInit {
   
-  jogadordrop:Jogadordrop[] = [
-    {value: 'Bahia', viewValue: 'Bahia'},
-    {value: 'Biriguense', viewValue: 'Biriguense'},
-    {value: 'Novo Horizontino', viewValue: 'Novo Horizontino'}
-  ];
+  clubes:Clube[] = [];
 
   form= this.formBuilder.group({
     nome:"",
-    clube:"",
+    idClube:"",
     camisa:"",
     posicao:"",
     peBom:"",
 
   })
   constructor(private formBuilder:FormBuilder,
-    private _service:JogadorService) { }
+    private _service:JogadorService,
+    private _serviceclube:ClubeService) { }
 
   ngOnInit(): void {
+    this._serviceclube.listar().subscribe(result=> this.clubes = result)
   }
   
   save(){

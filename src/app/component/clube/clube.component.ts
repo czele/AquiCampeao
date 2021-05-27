@@ -13,7 +13,7 @@ export class ClubeComponent implements OnInit {
     nome:"",
     cidade:"",
     estadio:"",
-    anodefundacao:"", 
+    anoFundacao:"", 
    })
   constructor(private formBuilder:FormBuilder,
     private _service:ClubeService) { }
