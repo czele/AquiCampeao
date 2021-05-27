@@ -2,29 +2,32 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <body>
 
-<div class="w3-container">
-  <h2 style = "text-align: center">Clubes listados:</h2>
+  <div class="w3-container">
+    <h2 style="text-align: center">Clubes listados:</h2>
 
-  <table class="w3-table-all">
-    <tr>
-      <th>Nome</th>
-      <th>Cidade</th>
-      <th>Estádio</th>
-      <th>Ano de Fundação</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let cadaclube of clubeList">  
-      <td>{{cadaclube.nome}}</td>
-      <td>{{cadaclube.cidade}}</td>
-      <td>{{cadaclube.nomeEstadio}}</td>
-      <td>{{cadaclube.anoFundacao}}</td>
-      <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete" src="./../assets/lixeira.png"></button></td>
-    </tr>
-  </table>
-  <a [routerLink]="['/clube']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
-</div>
+    <table class="w3-table-all">
+      <tr>
+        <th>Nome</th>
+        <th>Cidade</th>
+        <th>Estádio</th>
+        <th>Ano de Fundação</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let cadaclube of clubeList">
+        <td>{{cadaclube.nome}}</td>
+        <td>{{cadaclube.cidade}}</td>
+        <td>{{cadaclube.nomeEstadio}}</td>
+        <td>{{cadaclube.anoFundacao}}</td>
+        <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete"
+              src="./../assets/lixeira.png"></button>
+      </tr>
+    </table>
+    <a [routerLink]="['/clube']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
+  </div>
 
 </body>
+
 </html>
