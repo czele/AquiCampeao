@@ -10,9 +10,9 @@ export class ClubeComponent implements OnInit {
 
 
   form=this.formBuilder.group({
-    nome:"",
+    nome: "",
     cidade:"",
-    estadio:"",
+    nomeEstadio:"",
     anoFundacao:"", 
    })
   constructor(private formBuilder:FormBuilder,

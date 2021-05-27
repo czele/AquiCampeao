@@ -24,10 +24,10 @@ export class JogadorComponent implements OnInit {
   })
   constructor(private formBuilder:FormBuilder,
     private _service:JogadorService,
-    private _serviceclube:ClubeService) { }
+    private _serviceclube: ClubeService) { }
 
   ngOnInit(): void {
-    this._serviceclube.listar().subscribe(result=> this.clubes = result)
+    this._serviceclube.listar().subscribe(result => this.clubes = result)
   }
   
   save(){
