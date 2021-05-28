@@ -30,8 +30,8 @@ export class JogadorComponent implements OnInit {
     camisa:"",
     posicao:"",
     peBom:"",
-
   })
+  
   constructor(private formBuilder:FormBuilder,
     private _service:JogadorService,
     private _serviceclube: ClubeService) { }
