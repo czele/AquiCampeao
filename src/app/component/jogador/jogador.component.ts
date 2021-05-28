@@ -4,14 +4,24 @@ import { Clube } from 'src/app/model/clube.model';
 import { ClubeService } from 'src/app/service/clube.service';
 import { JogadorService } from 'src/app/service/jogador.service';
 
-
+interface Posicoes {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-jogador',
   templateUrl: './jogador.component.html',
   styleUrls: ['./jogador.component.css']
 })
 export class JogadorComponent implements OnInit {
-  
+  posicoes: Posicoes[] = [
+    {value: 'Goleiro', viewValue: 'Goleiro'},
+    {value: 'Zagueiro', viewValue: 'Zagueiro'},
+    {value: 'Volante', viewValue: 'Volante'},
+    {value: 'Lateral', viewValue: 'Lateral'},
+    {value: 'Meio de Campo', viewValue: 'Meio de Campo'},
+    {value: 'Atacante', viewValue: 'Atacante'},
+  ];
   clubes:Clube[] = [];
 
   form= this.formBuilder.group({
