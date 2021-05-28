@@ -24,7 +24,6 @@ import { ClubeService } from './service/clube.service';
 import { PartidaService } from './service/partida.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ClassificacaoComponent } from './classificacao/classificacao.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import { ClassificacaoComponent } from './classificacao/classificacao.component'
     ClubelistarComponent,
     JogadorlistarComponent,
     PartidalistarComponent,
-    ClassificacaoComponent,
   ],
   imports: [
     BrowserModule,
