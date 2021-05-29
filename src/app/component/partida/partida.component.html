@@ -7,7 +7,11 @@
     Mandante:<br>
     <mat-form-field>
       <mat-label>Mandante:</mat-label>
-      <input matInput placeholder="" formControlName="mandante">
+      <mat-select formControlName="idMandante">
+        <mat-option *ngFor="let clube of clubes" [value]="clube.id">
+          {{clube.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
 
     <br><br><br>
@@ -15,14 +19,18 @@
     Visitante<br>
     <mat-form-field>
       <mat-label>Visitante:</mat-label>
-      <input matInput placeholder="" formControlName="visitante">
+      <mat-select formControlName="idVisitante">
+        <mat-option *ngFor="let clube of clubes" [value]="clube.id">
+          {{clube.nome}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <br><br><br>
 
     Gols Mandante:<br>
     <mat-form-field>
       <mat-label>Gols Mandante:</mat-label>
-      <input matInput placeholder="" formControlName="golsmandante">
+      <input matInput placeholder="" formControlName="golsMandante">
     </mat-form-field>
 
     <br><br><br>
@@ -30,21 +38,21 @@
     Gols Visitante:<br>
     <mat-form-field>
       <mat-label>Gols Visitante:</mat-label>
-      <input matInput placeholder="" formControlName="golsvisitante">
+      <input matInput placeholder="" formControlName="golsVisitante">
     </mat-form-field>
 
     <br><br><br>
 
     Data:<br>
- 
+
     <mat-form-field appearance="fill">
       <mat-label>Escolha a data da partida</mat-label>
-      <input matInput [matDatepicker]="picker">
+      <input matInput [matDatepicker]="picker" formControlName="data">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    
-    
+
+
 
     <br>
     <button mat-raised-button color="salvar">Salvar</button>

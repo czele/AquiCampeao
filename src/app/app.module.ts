@@ -25,6 +25,7 @@ import { PartidaService } from './service/partida.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,13 +52,13 @@ import { MatNativeDateModule } from '@angular/material/core';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule,
+    MatNativeDateModule
   ],
   providers: [
     HttpClient,
     JogadorService,
     ClubeService,
-    PartidaService,
+    PartidaService
   ],
   bootstrap: [AppComponent]
 })
