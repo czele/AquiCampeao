@@ -32,7 +32,13 @@
       <input matInput placeholder="" formControlName="anoFundacao">
     </mat-form-field>
 
-    <br><br><br>
+    <br><br>
+    <div style="color:rebeccapurple;"*ngIf="error == true">
+      {{errormsg}}
+    </div>
+
+
+    <br>
 
     <button mat-raised-button color="salvar" type="submit">Salvar</button>
     <button class="margembotao" mat-raised-button color="listar"><a [routerLink]="['/clubelistar']">Listar</a></button>

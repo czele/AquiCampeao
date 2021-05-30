@@ -10,6 +10,8 @@ import { ClubeService } from 'src/app/service/clube.service';
 })
 export class ClubeComponent implements OnInit {
 
+  error:boolean = false;
+  errormsg:string = "";
 
   form=this.formBuilder.group({
     nome: "",
@@ -28,7 +30,12 @@ export class ClubeComponent implements OnInit {
     console.log(this.form.value)
     this._service.inserir(this.form.value)
     .subscribe(response=>{console.log(response)
-      this._router.navigateByUrl('/clubelistar')}
-          )}
+      this._router.navigateByUrl('/clubelistar')
+    }, e => {
+        this.error = true
+        this.errormsg = e.error.mensagem
+        //console.log(e.error.mensagem)
+    })
+  }
 
 }
