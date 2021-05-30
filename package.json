@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "moment": "^2.29.1",
     "@angular/animations": "~11.2.12",
     "@angular/cdk": "^11.2.12",
     "@angular/common": "~11.2.12",
@@ -26,6 +27,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "moment": "^2.29.1",
     "@angular-devkit/build-angular": "~0.1102.11",
     "@angular/cli": "~11.2.11",
     "@angular/compiler-cli": "~11.2.12",

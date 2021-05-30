@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -9,6 +9,7 @@ import { Jogador } from '../model/jogador.model';
   providedIn: 'root'
 })
 export class ClubeService {
+
 
   baseUrl:string = environment.baseUrl
   // endpoint:string = "clube/listar"  
@@ -21,6 +22,12 @@ export class ClubeService {
 
   inserir(clube: Clube): Observable<any> {
     return this._http.post<any>(`${this.baseUrl}clube/inserir`, clube);
+  }
+
+  obter(id:number): Observable<Clube> {
+    var params = new HttpParams();
+    params.set('id', id.toString())
+    return this._http.get<Clube>(`${this.baseUrl}clube/obter`,{params:params})
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClubeService } from 'src/app/service/clube.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class ClubeComponent implements OnInit {
 
   error:boolean = false;
   errormsg:string = "";
+  id:number = 0;
 
   form=this.formBuilder.group({
     nome: "",
@@ -21,9 +22,17 @@ export class ClubeComponent implements OnInit {
    })
   constructor(private formBuilder:FormBuilder,
     private _service:ClubeService,
-    private _router:Router) { }
+    private _router:Router,
+    private _route:ActivatedRoute) { }
 
   ngOnInit(): void {
+      const param=this._route.snapshot.paramMap;
+      this.id = Number(param.get('id'))
+
+      this._service.obter(this.id)
+      .subscribe(pessoa=>{
+          console.log(pessoa)
+      })
   }
 
   save(){

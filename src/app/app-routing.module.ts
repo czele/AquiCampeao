@@ -12,6 +12,7 @@ import { PartidalistarComponent } from './component/partidalistar/partidalistar.
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'clube', component: ClubeComponent },
+  { path: "clube/:id", component: ClubeComponent },
   { path: 'jogador', component: JogadorComponent },
   { path: 'partida', component: PartidaComponent },
   { path: 'clubelistar', component: ClubelistarComponent },
