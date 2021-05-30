@@ -26,7 +26,9 @@ export class ClubeComponent implements OnInit {
 
   save(){
     console.log(this.form.value)
-    this._service.inserir(this.form.value).subscribe(response=>console.log(response))
-  }
+    this._service.inserir(this.form.value)
+    .subscribe(response=>{console.log(response)
+      this._router.navigateByUrl('/clubelistar')}
+          )}
 
 }
