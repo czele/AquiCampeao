@@ -53,12 +53,10 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-
-
     <br>
-    <button mat-raised-button color="salvar">Salvar</button>
+    <button mat-raised-button color="salvar" type="submit">Salvar</button>
 
-    <button class="margembotao" mat-raised-button color="listar"><a
-        [routerLink]="['/partidalistar']">Listar</a></button>
+    <button class="margembotao" mat-raised-button color="listar">
+      <a [routerLink]="['/partidalistar']">Listar</a></button>
   </form>
 </div>
