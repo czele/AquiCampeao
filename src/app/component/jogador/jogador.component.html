@@ -54,6 +54,11 @@
         <mat-radio-button value="Direito">Pé Direito</mat-radio-button>
       </mat-radio-group>
     </div>
+
+    <div style="color:rebeccapurple;" *ngIf="error">
+      {{errormsg}}
+    </div>
+  
     <!-- importante que o botão esteja dentro da tag FORM já que ele é o submit do form  -->
     <button mat-raised-button color="salvar" type="submit">Salvar</button>
 
