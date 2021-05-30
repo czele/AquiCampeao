@@ -52,6 +52,10 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
+    <div style="color:rebeccapurple" *ngIf="error">
+      {{errormsg}}
+    </div>
+
     <br>
     <button mat-raised-button color="salvar" type="submit">Salvar</button>
 

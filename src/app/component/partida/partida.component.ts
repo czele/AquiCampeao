@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 export class PartidaComponent implements OnInit {
 
   clubes: Clube[] = [];
+  error:boolean=false;
+  errormsg:string="";
 
   form = this.formBuilder.group({
     idMandante: "",
@@ -35,6 +37,10 @@ export class PartidaComponent implements OnInit {
     console.log(this.form.value)
     this._service.inserir(this.form.value).subscribe
     (response => {console.log(response)
-    this._router.navigateByUrl('/partidalistar')})
-  }
+    this._router.navigateByUrl('/partidalistar')},
+    e=>{
+      this.error=true
+      this.errormsg=e.error.mensagem
+    }
+  )}
 }
