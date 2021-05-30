@@ -16,8 +16,8 @@ import * as moment from 'moment';
 export class PartidaComponent implements OnInit {
 
   clubes: Clube[] = [];
-  error:boolean=false;
-  errormsg:string="";
+  error: boolean = false;
+  errormsg: string = "";
 
   form = this.formBuilder.group({
     idMandante: "",
@@ -30,19 +30,19 @@ export class PartidaComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private _service: PartidaService,
     private _serviceclube: ClubeService,
-    private _router:Router) { }
-        
+    private _router: Router) { }
+
   ngOnInit(): void {
     this._serviceclube.listar().subscribe(result => this.clubes = result)
   }
-  
+
 
   save() {
     let dateString = this.form.get('data')?.value;
     let momentVariable = moment(dateString, 'DD/MM/YYYY');
     let stringvalue = momentVariable.format('yyyy-MM-DDThh:mm:ss.SSS');
 
-    var xatuba:Partida = {
+    var xatuba: Partida = {
       id: 0,
       idMandante: this.form.get('idMandante')?.value,
       golsMandante: parseInt(this.form.get('golsMandante')?.value),
@@ -53,13 +53,15 @@ export class PartidaComponent implements OnInit {
 
     console.log(xatuba)
 
-    console.log(this.form.value)
-    this._service.inserir(this.form.value).subscribe
-    (response => {console.log(response)
-    this._router.navigateByUrl('/partidalistar')},
-    e=>{
-      this.error=true
-      this.errormsg=e.error.mensagem
-    }
-    )}
+    this._service.inserir(xatuba).subscribe
+      (response => {
+        console.log(response)
+        this._router.navigateByUrl('/partidalistar')
+      },
+        e => {
+          this.error = true
+          this.errormsg = e.error.mensagem
+        }
+      )
+  }
 }
