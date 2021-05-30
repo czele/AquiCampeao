@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ClubeService } from 'src/app/service/clube.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class ClubeComponent implements OnInit {
     anoFundacao:"", 
    })
   constructor(private formBuilder:FormBuilder,
-    private _service:ClubeService) { }
+    private _service:ClubeService,
+    private _router:Router) { }
 
   ngOnInit(): void {
   }
