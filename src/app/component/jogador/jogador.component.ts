@@ -24,6 +24,8 @@ export class JogadorComponent implements OnInit {
     {value: 'Atacante', viewValue: 'Atacante'},
   ];
   clubes:Clube[] = [];
+  error:boolean=false;
+  errormsg:string = "";
 
   form= this.formBuilder.group({
     nome:"",
@@ -43,10 +45,14 @@ export class JogadorComponent implements OnInit {
   }
   
   save(){
-    console.log(this.form.value)
+    // console.log(this.form.value)
     this._service.inserir(this.form.value)
     .subscribe(response=>{console.log(response)
-      this._router.navigateByUrl('/jogadorlistar')})
+      this._router.navigateByUrl('/jogadorlistar')
+    },e=> {
+      this.error=true
+      this.errormsg=e.error.mensagem
+    // console.log(e.error.mensagem)
+  })
   }
-
 }
