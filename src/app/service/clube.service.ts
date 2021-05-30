@@ -24,10 +24,16 @@ export class ClubeService {
     return this._http.post<any>(`${this.baseUrl}clube/inserir`, clube);
   }
 
-  obter(id:number): Observable<Clube> {
-    var params = new HttpParams();
-    params.set('id', id.toString())
-    return this._http.get<Clube>(`${this.baseUrl}clube/obter`,{params:params})
-  }
+  // obter(id:number): Observable<Clube> {
+  //   const options ={
+  //     params: new HttpParams()
+  //     .set('id', id.toString())
+  //   }
+
+  // atualizar(clube: Clube): Observable<any> {
+  //   return this._http.post<any>(`${this.baseUrl}clube/atualizar`, clube);
+  // }
+  //   return this._http.get<Clube>(`${this.baseUrl}clube/obter`,options)
+  // }
 
 }
