@@ -12,21 +12,24 @@
       <tr>
         <th>Nome do Clube</th>
         <th>Pontos</th>
-        <th>Vitória</th>
-        <th>Empate</th>
+        <th>Vitórias</th>
+        <th>Empates</th>
         <th>Derrota</th>
         <th>Saldo de Gols</th>
       </tr>
       <tr *ngFor="let class of classList">
-        <td>{{cadaclube.nome}}</td>
-        <td>{{cadaclube.cidade}}</td>
-        <td>{{cadaclube.nomeEstadio}}</td>
-        <td>{{cadaclube.anoFundacao}}</td>
+        <td>{{class.nomeClube}}</td>
+        <td>{{class.pontos}}</td>
+        <td>{{class.vitoria}}</td>
+        <td>{{class.empate}}</td>
+        <td>{{class.derrota}}</td>
+        <td>{{class.saldoGols}}</td>
         <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete"
               src="./../assets/lixeira.png"></button>
       </tr>
     </table>
-    <a [routerLink]="['/clube']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
+    <!-- Porque essa porcaria não funciona e nos outros funciona?
+        <a [routerLink]="['/classificacao']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a> -->
   </div>
 
 </body>

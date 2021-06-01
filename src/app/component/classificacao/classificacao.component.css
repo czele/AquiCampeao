@@ -1,0 +1,11 @@
+.botaomais{
+    width: 40px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.bedit, .bdelete{
+    width: 25px;
+}
