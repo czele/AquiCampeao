@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Classificacao } from 'src/app/model/classificacaomodel';
+import { ClassificacaoService } from 'src/app/service/classificacao.service';
 
 @Component({
   selector: 'app-classificacao',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassificacaoComponent implements OnInit {
 
-  constructor() { }
+  classList: Classificacao[] = [];
+  constructor(private _service:ClassificacaoService) { }
 
   ngOnInit(): void {
+    this._service.listar().subscribe(classificacao=> this.classList = classificacao)
   }
 
 }
