@@ -25,7 +25,8 @@ export class ClubeComponent implements OnInit {
     private _service: ClubeService,
     private _router: Router,
     private _route: ActivatedRoute) { }
-    /*a injeção de dependência substitui o seguinte: var _service = new ClubeService(); 
+    /*a injeção de dependência substitui o seguinte: var _service = new ClubeService(); -> em outras palavras não precisamos ficar instanciando
+    classes manualmente, e assim economizamos memória.
     Para que a dependência possa ser injetada a classe deve estar declarada na lista de provider no app.module ou no próprio component
     Um detalhe é que no angular a injeção de dependências é sempre feita em um método construtor, em outras linguagem pode haver outros métodos
     */
