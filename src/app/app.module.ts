@@ -57,7 +57,7 @@ import { MatNativeDateModule } from '@angular/material/core';
   providers: [
     HttpClient,
     JogadorService,
-    ClubeService,
+    ClubeService, /*olha aqui a injeção de dependência aqui no provider para o Angular saber*/
     PartidaService
   ],
   bootstrap: [AppComponent]
