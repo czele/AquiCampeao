@@ -27,17 +27,19 @@ export class ClubeService {
   obter(id: number): Observable<any> {
     const options = {
       params: new HttpParams()
-      .set('id', id.toString())
+        .set('id', id.toString())
     }
     return this._http.get<Clube[]>(`${this.baseUrl}clube/obter`, options);
   }
   atualizar(clube: Clube): Observable<any> {
     return this._http.put<any>(`${this.baseUrl}clube/atualizar`, clube);
   }
-  // atualizar(clube: Clube): Observable<any> {
-  //   return this._http.post<any>(`${this.baseUrl}clube/atualizar`, clube);
-  // }
-  //   return this._http.get<Clube>(`${this.baseUrl}clube/obter`,options)
-  // }
+  deletar(id: number): Observable<any> {
+    const options = {
+      params: new HttpParams()
+        .set('id', id.toString())
+    }
+    return this._http.delete<any>(`${this.baseUrl}clube/deletar`,options);
+  }
 
 }

@@ -21,8 +21,9 @@
         <td>{{cadaclube.cidade}}</td>
         <td>{{cadaclube.nomeEstadio}}</td>
         <td>{{cadaclube.anoFundacao}}</td>
-        <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete"
-              src="./../assets/lixeira.png"></button>
+        <td><button><a [routerLink]="['/clube/' + cadaclube.id]"><img class="bedit" src="./../assets/editar.png"></a></button>
+            <button><img class="bdelete"src="./../assets/lixeira.png"
+              (click)="delete(cadaclube.id)"></button>
       </tr>
     </table>
     <a [routerLink]="['/clube']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
