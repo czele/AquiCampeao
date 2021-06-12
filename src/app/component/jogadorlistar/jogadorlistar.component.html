@@ -21,7 +21,8 @@
       <td>{{cadajogador.idClube}}</td>
       <td>{{cadajogador.posicao}}</td>
       <td>{{cadajogador.peBom}}</td>
-      <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete" src="./../assets/lixeira.png"></button></td>
+      <td><button><img class="bedit" src="./../assets/editar.png"></button>
+        <button><img class="bdelete" src="./../assets/lixeira.png" (click)="delete(pessoa.id)"></button></td>
     </tr>
   </table>
   <a [routerLink]="['/jogador']"> <img class="botaomais" src="./../assets/addbutton.webp"> </a>
