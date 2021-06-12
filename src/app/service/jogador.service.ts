@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -20,6 +20,14 @@ export class JogadorService {
 
   inserir(jogador:Jogador): Observable<any> {
     return this._http.post<any>(`${this.baseUrl}jogador/inserir`, jogador);
+  }
+
+  deletar(id:number): Observable<any> {
+    const options = {
+      params: new HttpParams()
+      .set('id', id.toString())
+    }
+    return this._http.delete<any>(`${this.baseUrl}jogador/deletar`, options);
   }
 
 }
