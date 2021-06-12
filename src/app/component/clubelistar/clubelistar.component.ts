@@ -11,10 +11,21 @@ export class ClubelistarComponent implements OnInit {
 
   clubeList: Clube[] = [];
 
-  constructor(private _service:ClubeService) { }
+  constructor(private _service: ClubeService) { }
 
   ngOnInit(): void {
-    this._service.listar().subscribe(clube=> this.clubeList = clube)
+    this.load()
   }
+
+  load(){
+    this._service.listar().subscribe(clube => this.clubeList = clube)
+  }
+
+  delete(id:number) {
+    if (confirm("Deseja realmente excluir?"))
+      this._service.deletar(id).subscribe(result=>{this.load()})
+
+  }
+
 
 }
