@@ -27,7 +27,7 @@ export class JogadorService {
       params: new HttpParams()
       .set('id', id.toString())
     }
-    return this._http.delete<any>(`${this.baseUrl}jogador/deletar`, options);
+    return this._http.delete<any>(`${this.baseUrl}jogadorlistar/deletar`, options);
   }
 
 }

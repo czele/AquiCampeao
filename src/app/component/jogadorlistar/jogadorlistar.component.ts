@@ -16,10 +16,19 @@ export class JogadorlistarComponent implements OnInit {
   constructor(private _service:JogadorService) { }
 
   ngOnInit(): void {
+   this.load()
+   }
+
+   load(){
     //chamada do método "listar" dentro da service do jogador
     //subscribe é a resposta recebida pelo get
     //este procedimento pega a responsta e atribui a lista jogadorList
     this._service.listar().subscribe(jogador => this.jogadorList = jogador)
    }
+
+   delete (id:number){
+    if(confirm("Você deseja realmente excluir este registro?" ))
+    this._service.deletar(id).subscribe(result => this.load())
+  }
 
 }

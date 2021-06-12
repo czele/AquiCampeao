@@ -56,9 +56,4 @@ export class JogadorComponent implements OnInit {
     // console.log(e.error.mensagem)
   })
   }
-
-  delete (id:number){
-    if(confirm("Você deseja realmente excluir este registro?" ))
-    this._service.deletar(id).subscribe()
-  }
 }
