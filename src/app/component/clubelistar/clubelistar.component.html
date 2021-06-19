@@ -22,7 +22,7 @@
         <td>{{cadaclube.nomeEstadio}}</td>
         <td>{{cadaclube.anoFundacao}}</td>
         <td><button><a [routerLink]="['/clube/' + cadaclube.id]"><img class="bedit" src="./../assets/editar.png"></a></button>
-            <button><img class="bdelete"src="./../assets/lixeira.png" style="cursor: pointer;"
+            <button><img class="bdelete"src="./../assets/lixeira.png"
               (click)="delete(cadaclube.id)"></button>
       </tr>
     </table>

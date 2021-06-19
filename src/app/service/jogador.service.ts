@@ -24,8 +24,7 @@ export class JogadorService {
 
   deletar(id:number): Observable<any> {
     const options = {
-      params: new HttpParams()
-      .set('id', id.toString())
+      params: new HttpParams().set('id', id.toString())
     }
     return this._http.delete<any>(`${this.baseUrl}jogador/deletar`, options);
   }

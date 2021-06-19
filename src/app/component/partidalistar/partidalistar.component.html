@@ -22,7 +22,9 @@
       <td>{{cadapartida.golsVisitante}}</td>
       <td>{{cadapartida.idVisitante}}</td>
       <td>{{cadapartida.data}}</td>
-      <td><button><img class="bedit" src="./../assets/editar.png"></button><button><img class="bdelete" src="./../assets/lixeira.png"></button></td>
+      <td><button><img class="bedit" src="./../assets/editar.png"></button>
+          <button><img class="bdelete" src="./../assets/lixeira.png"
+            (click)="delete(cadapartida.id)"></button></td>
     </tr>
   </table>
   <a [routerLink]="['/partida']" > <img class="botaomais" src="./../assets/addbutton.webp"> </a>

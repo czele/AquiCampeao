@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
@@ -18,9 +18,16 @@ export class PartidaService {
     return this._http.get<Partida[]>(`${this.baseUrl}partida/listar`)
   }
 
-
   inserir(partida: Partida): Observable<any> {
     return this._http.post<any>(`${this.baseUrl}partida/inserir`, partida);
   }
+
+  deletar(id:number): Observable<any> {
+    const options= {
+      params: new HttpParams().set('id', id.toString())
+    }
+    return this._http.delete<any>(`${this.baseUrl}partida/deletar`, options);
+  }
+
 
 }
