@@ -16,7 +16,6 @@ import { JogadorComponent } from './component/jogador/jogador.component';
 import { MatGridListModule } from '@angular/material/grid-list'; 
 import { MatTableModule } from '@angular/material/table';
 import { ClubelistarComponent } from './component/clubelistar/clubelistar.component';
-import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.component';
 import { PartidalistarComponent } from './component/partidalistar/partidalistar.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JogadorService } from './service/jogador.service';
@@ -24,6 +23,8 @@ import { ClubeService } from './service/clube.service';
 import { PartidaService } from './service/partida.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.component';
 
 
 @NgModule({
@@ -33,8 +34,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     PartidaComponent,
     ClubeComponent,
     JogadorComponent,
-    ClubelistarComponent,
     JogadorlistarComponent,
+    ClubelistarComponent,
     PartidalistarComponent,
   ],
   imports: [
@@ -52,7 +53,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSnackBarModule
   ],
   providers: [
     HttpClient,

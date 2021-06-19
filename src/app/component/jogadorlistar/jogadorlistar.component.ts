@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Jogador } from 'src/app/model/jogador.model';
 import { JogadorService } from 'src/app/service/jogador.service';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ export class JogadorlistarComponent implements OnInit {
 // cria uma variável chamada jogadorList, declarada como lista
   jogadorList:Jogador[] = [];
 //chamando a service do jogador
-  constructor(private _service:JogadorService) { }
+  constructor(private _service:JogadorService,) { }
 
   ngOnInit(): void {
    this.load()
@@ -30,5 +32,6 @@ export class JogadorlistarComponent implements OnInit {
     if(confirm("Você deseja realmente excluir este registro?" ))
     this._service.deletar(id).subscribe(result => this.load())
   }
+
 
 }
