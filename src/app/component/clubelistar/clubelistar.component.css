@@ -8,4 +8,5 @@
 
 .bedit, .bdelete{
     width: 25px;
+    cursor: pointer;
 }
