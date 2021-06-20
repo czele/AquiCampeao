@@ -18,6 +18,13 @@ export class JogadorService {
     return this._http.get<Jogador[]>(`${this.baseUrl}jogador/listar`);
   }
 
+  obter(id:number): Observable<Jogador> {
+    const options ={
+      params: new HttpParams().set('id', id.toString())
+    }
+    return this._http.get<Jogador>(`${this.baseUrl}jogador/obter`, options);
+  }
+
   inserir(jogador:Jogador): Observable<any> {
     return this._http.post<any>(`${this.baseUrl}jogador/inserir`, jogador);
   }

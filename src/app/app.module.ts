@@ -25,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.component';
+import { ClassificacaoComponent } from './component/classificacao/classificacao.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { JogadorlistarComponent } from './component/jogadorlistar/jogadorlistar.
     JogadorlistarComponent,
     ClubelistarComponent,
     PartidalistarComponent,
+    ClassificacaoComponent,
   ],
   imports: [
     BrowserModule,

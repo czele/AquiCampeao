@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Clube } from 'src/app/model/clube.model';
 import { ClubeService } from 'src/app/service/clube.service';
 import { JogadorService } from 'src/app/service/jogador.service';
@@ -27,6 +27,7 @@ export class JogadorComponent implements OnInit {
   clubes:Clube[] = [];
   error:boolean=false;
   errormsg:string = "";
+  id:number = 0;
 
   form= this.formBuilder.group({
     nome:"",
@@ -39,9 +40,19 @@ export class JogadorComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,
     private _service:JogadorService,
     private _serviceclube:ClubeService,
-    private _router:Router) { }
+    private _router:Router,
+    private _route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    const param = this._route.snapshot.paramMap;
+    this.id = Number(param.get('id'))
+    this._service.obter(this.id).subscribe(jogador => {
+      this.form.get('nome')?.setValue(jogador.nome);
+      this.form.get('clube')?.setValue(jogador.idClube)
+      this.form.get('camisa')?.setValue(jogador.camisa)
+      this.form.get('posicao')?.setValue(jogador.posicao)
+      this.form.get('pebom')?.setValue(jogador.peBom)
+    })
     this._serviceclube.listar().subscribe(result => this.clubes = result)
   }
   
