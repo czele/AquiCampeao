@@ -29,6 +29,10 @@ export class JogadorService {
     return this._http.post<any>(`${this.baseUrl}jogador/inserir`, jogador);
   }
 
+  atualizar(jogador:Jogador): Observable<any> {
+    return this._http.put<any>(`${this.baseUrl}jogador/atualizar`, jogador);
+  }
+
   deletar(id:number): Observable<any> {
     const options = {
       params: new HttpParams().set('id', id.toString())

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Jogador } from 'src/app/model/jogador.model';
 import { JogadorService } from 'src/app/service/jogador.service';
 
@@ -15,7 +16,8 @@ export class JogadorlistarComponent implements OnInit {
 // cria uma variável chamada jogadorList, declarada como lista
   jogadorList:Jogador[] = [];
 //chamando a service do jogador
-  constructor(private _service:JogadorService,) { }
+  constructor(private _service:JogadorService,
+              private _router:Router) { }
 
   ngOnInit(): void {
    this.load()
@@ -33,5 +35,8 @@ export class JogadorlistarComponent implements OnInit {
     this._service.deletar(id).subscribe(result => this.load())
   }
 
+  showEdit(jogador:Jogador){
+    this._router.navigateByUrl(`/jogador/${jogador.id}`)
+  }
 
 }

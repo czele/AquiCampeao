@@ -17,12 +17,12 @@
       <th></th>
     </tr>
     <!-- ngFor serve como um for, ele vai pegar todos os dados obtidos com o get e colocar em td's -->
-    <tr *ngFor="let cadajogador of jogadorList">
+    <tr *ngFor="let cadajogador of jogadorList">      
       <td>{{cadajogador.nome}}</td>
       <td>{{cadajogador.idClube}}</td>
       <td>{{cadajogador.posicao}}</td>
       <td>{{cadajogador.peBom}}</td>
-      <td><button><img class="bedit" src="./../assets/editar.png"></button>
+      <td><button><img class="bedit" src="./../assets/editar.png" (click)="showEdit(cadajogador)"></button>
         <button><img class="bdelete" src="./../assets/lixeira.png"    (click)="delete(cadajogador.id)"></button></td>
     </tr>
   </table>

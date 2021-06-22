@@ -26,6 +26,4 @@ export class ClubelistarComponent implements OnInit {
       this._service.deletar(id).subscribe(result=>{this.load()})
 
   }
-
-
 }
