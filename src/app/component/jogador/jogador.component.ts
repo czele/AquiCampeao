@@ -49,10 +49,10 @@ export class JogadorComponent implements OnInit {
     this.id = Number(param.get('id'))
     this._service.obter(this.id).subscribe(jogador => {
       this.form.get('nome')?.setValue(jogador.nome);
-      this.form.get('clube')?.setValue(jogador.idClube)
+      this.form.get('idClube')?.setValue(jogador.idClube)
       this.form.get('camisa')?.setValue(jogador.camisa)
       this.form.get('posicao')?.setValue(jogador.posicao)
-      this.form.get('pebom')?.setValue(jogador.peBom)
+      this.form.get('peBom')?.setValue(jogador.peBom)
     })
     this._serviceclube.listar().subscribe(result => this.clubes = result)
   }
