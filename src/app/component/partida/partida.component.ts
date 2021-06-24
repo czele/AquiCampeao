@@ -3,7 +3,7 @@ import { PartidaService } from 'src/app/service/partida.service';
 import { FormBuilder } from '@angular/forms';
 import { ClubeService } from 'src/app/service/clube.service';
 import { Clube } from 'src/app/model/clube.model';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLinkActive } from '@angular/router';
 import { Partida } from 'src/app/model/partida.model';
 import * as moment from 'moment';
 
@@ -18,6 +18,7 @@ export class PartidaComponent implements OnInit {
   clubes: Clube[] = [];
   error: boolean = false;
   errormsg: string = "";
+  id: number = 0;
 
   form = this.formBuilder.group({
     idMandante: "",
@@ -30,12 +31,16 @@ export class PartidaComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private _service: PartidaService,
     private _serviceclube: ClubeService,
-    private _router: Router) { }
+    private _router: Router,
+    private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this._serviceclube.listar().subscribe(result => this.clubes = result)
+    this._serviceclube.listar().subscribe(result => this.clubes = result);
+    // Não entendi nada dessa próxima linha
+    const param = this._route.snapshot.paramMap;
+    this.id = Number(param.get('id'))
+    this._service.obter(this.id).subscribe();
   }
-
 
   save() {
     let dateString = this.form.get('data')?.value;

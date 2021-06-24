@@ -25,12 +25,17 @@ export class ClubelistarComponent implements OnInit {
 
   delete(id:number) {
     if (confirm("Deseja realmente excluir?"))
-      this._service.deletar(id).subscribe(result=>{this.load()})
+      this._service.deletar(id).subscribe(result=>{this.load()}); 
+      this.openSnackBar()
   }
 
+  openSnackBar() {
+    this._snackBar.open("Clube deletado com sucesso!",);
+  }
 }
 // Tentamos colocar o Snack bar sem sucesso
 // this.openSnackBar()
+
 // openSnackBar() {
 //   this._snackBar.open("Clube deletado com sucesso!");
 // }

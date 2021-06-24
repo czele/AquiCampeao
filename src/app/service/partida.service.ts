@@ -22,6 +22,13 @@ export class PartidaService {
     return this._http.post<any>(`${this.baseUrl}partida/inserir`, partida);
   }
 
+  obter(id: number): Observable<Partida>{
+    // Parei aqui, não consegui entender o que fizemos aqui
+    const options = {
+      params: new HttpParams().set('id', id.toString())}
+    return this._http.get<Partida>(`${this.baseUrl}partida/obter`, options)
+  }
+
   deletar(id:number): Observable<any> {
     const options= {
       params: new HttpParams().set('id', id.toString())
