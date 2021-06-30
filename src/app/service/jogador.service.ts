@@ -17,6 +17,7 @@ export class JogadorService {
   listar(): Observable<Jogador[]> {
     return this._http.get<Jogador[]>(`${this.baseUrl}jogador/listar`);
   }
+  // 
 
   obter(id:number): Observable<Jogador> {
     const options ={

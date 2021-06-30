@@ -31,6 +31,7 @@ export class ClubeService {
     }
     return this._http.get<Clube[]>(`${this.baseUrl}clube/obter`, options);
   }
+  // Tem que criar um método que chame o clube obter e procure o id com o nome do Clube
   atualizar(clube: Clube): Observable<any> {
     return this._http.put<any>(`${this.baseUrl}clube/atualizar`, clube);
   }
